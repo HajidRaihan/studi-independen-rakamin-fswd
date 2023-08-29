@@ -1,0 +1,15 @@
+body{
+  /* background: grey; */
+  /* background-color: blue; */
+  background: linear-gradient(to right, #eeeeee,whitesmoke);
+}
+.btn-login{
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+  padding: 1rem;
+}
+.btn-google{
+  background-color: red;
+  color: white !important
+}
+white-space: pre-line;
