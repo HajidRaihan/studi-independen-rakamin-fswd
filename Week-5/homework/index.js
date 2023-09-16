@@ -53,7 +53,7 @@ buttonSubmit.addEventListener("click", function () {
     }
 
     // variable untuk menentukan nilai rata rata dari umur dan uang sangu
-    rataUmurElement.innerHTML = ratarataUmur.toFixed(2);
+    rataUmurElement.innerHTML = Math.round(ratarataUmur);
     rataUangElement.innerHTML = ratarataUang.toFixed(2);
 
     // mereset value input nama, umur, dan uang sangu
