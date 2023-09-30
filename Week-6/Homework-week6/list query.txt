@@ -1,0 +1,51 @@
+* query untuk membuat database
+CREATE DATABASE db_barang;
+
+
+* query untuk membuat table barang
+create table barang
+(
+    id serial not null,
+    category_id varchar(10) not null,
+    name varchar, description text,
+    primary key (id),
+    CONSTRAINT fk_category FOREIGN KEY(category_id) REFERENCES category(id)
+);
+
+
+
+- query untuk membuat table category
+create table category
+(
+    id varchar not null,
+    nama varchar,
+    primary key (id)
+);
+
+- query untuk menampilkan data pada table barang
+select * from barang
+
+
+- query untuk menampilkan data pada table category
+select * from category
+
+
+- query insert untuk menambah data ke table barang
+insert into barang (category_id, name) values (1, 'laptop');
+
+
+- query insert untuk menambah data ke table category
+insert into category (nama) values ('fashion');
+
+
+
+- query update untuk update data pada table barang
+update barang set name = 'speaker' where id=3;
+
+
+- query update untuk update data pada table category
+update category set name = 'musik' where id=2;
+
+
+- query join untuk relasi kedua table
+select barang.id, barang.name, category.nama as category from barang inner join category on barang.category_id = category.id;
