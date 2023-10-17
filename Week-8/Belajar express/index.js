@@ -1,6 +1,6 @@
 const express = require("express");
 const things = require("./things.js");
-const client = require("./queries.js");
+const pool = require("./queries");
 const app = express();
 
 app.get("/", function (req, res) {
@@ -10,6 +10,6 @@ app.get("/", function (req, res) {
 app.post("/", function (req, res) {
   res.send("hello world??? anjai slebew");
 });
-client;
+pool
 app.use("/things", things);
 app.listen(3000);
